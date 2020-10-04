@@ -1,6 +1,7 @@
 package com.avacallery;
 
 public class TaxReport {
+
     // what state and behavior? We need to work with TaxCalculator
     private TaxCalculator calculator;
 
@@ -13,5 +14,10 @@ public class TaxReport {
     public void show() {
         var tax = calculator.calculateTax();
         System.out.println(tax);
+    }
+
+    // we can use this setter to inject dependencies
+    public void setCalculator(TaxCalculator calculator) {
+        this.calculator = calculator;
     }
 }
