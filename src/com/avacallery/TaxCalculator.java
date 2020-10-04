@@ -1,13 +1,8 @@
 package com.avacallery;
+// we don't have state or data in an interface
+// we only have method declarations so we know what needs to be done
 
-public class TaxCalculator {
-    private double taxableIncome;
-
-    public TaxCalculator(double taxableIncome) {
-        this.taxableIncome = taxableIncome;
-    }
-
-    public double calculateTax() {
-        return taxableIncome * 0.3;
-    }
+public interface TaxCalculator {
+    // abstract method declaration
+    double calculateTax();
 }
