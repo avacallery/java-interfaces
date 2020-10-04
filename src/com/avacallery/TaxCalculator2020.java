@@ -1,7 +1,8 @@
 package com.avacallery;
 
 // we implement interface here
-public class TaxCalculator2020 implements TaxCalculator{
+public class TaxCalculator2020
+        extends AbstractClassCalculator {
     private double taxableIncome;
 
     public TaxCalculator2020(double taxableIncome) {
