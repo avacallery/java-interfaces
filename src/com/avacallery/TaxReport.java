@@ -7,17 +7,18 @@ public class TaxReport {
 
     // we are injecting a dependency using the constructor
     // who is going to inject this?
-    public TaxReport(TaxCalculator calculator) {
-        this.calculator = calculator;
-    }
+//    public TaxReport(TaxCalculator calculator) {
+//        this.calculator = calculator;
+//    }
 
-    public void show() {
+    // method injection
+    public void show(TaxCalculator calculator) {
         var tax = calculator.calculateTax();
         System.out.println(tax);
     }
 
-    // we can use this setter to inject dependencies
-    public void setCalculator(TaxCalculator calculator) {
-        this.calculator = calculator;
+//    // we can use this setter to inject dependencies
+//    public void setCalculator(TaxCalculator calculator) {
+//        this.calculator = calculator;
     }
-}
+
